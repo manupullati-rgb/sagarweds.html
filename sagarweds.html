@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17090d">
+<title>NAIDU weds LAXMI | Wedding Invitation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
+  :root { --wine:#8c1027; --red:#d52a45; --ink:#17090d; --cream:#fff4e9; --gold:#e7bd82; }
+  * { box-sizing:border-box }
+  body { margin:0; min-height:100vh; color:var(--cream); background:radial-gradient(ellipse at 50% 30%,#46101c 0,#210b12 42%,#10070a 100%); font-family:'Montserrat',sans-serif; overflow-x:hidden; }
+  .scene { min-height:100vh; display:grid; place-items:center; padding:34px 16px; position:relative; isolation:isolate; overflow:hidden; }
+  .scene:before,.scene:after { content:""; position:absolute; width:470px;height:470px;border:1px solid #d9a66c24;border-radius:50%;z-index:-1; }
+  .scene:before { transform:scale(.75); box-shadow:0 0 0 28px #d9a66c0a,0 0 0 58px #d9a66c08; }
+  .scene:after { width:620px;height:620px;box-shadow:0 0 0 1px #d9a66c0a; }
+  .glow { position:absolute; inset:0; z-index:-1; background:radial-gradient(ellipse at 50% 70%,#b01d3029,transparent 48%); }
+  .card { width:min(100%,720px); min-height:900px; position:relative; padding:56px clamp(24px,7vw,70px) 48px; text-align:center; border:1px solid #d5a56a7d; outline:1px solid #d5a56a22; outline-offset:8px; background:linear-gradient(155deg,#250b12f2,#16090ef5 56%,#290a13f2); box-shadow:0 30px 100px #0009,inset 0 0 70px #a7192610; animation:rise 1.2s ease both; }
+  .card:before,.card:after { content:'✦'; position:absolute; color:var(--gold); font-size:18px; top:13px; }.card:before{left:15px}.card:after{right:15px}
+  .corner { position:absolute; width:34px;height:34px;border-color:#d9a66c99;border-style:solid; }.tl{top:20px;left:20px;border-width:1px 0 0 1px}.tr{top:20px;right:20px;border-width:1px 1px 0 0}.bl{bottom:20px;left:20px;border-width:0 0 1px 1px}.br{bottom:20px;right:20px;border-width:0 1px 1px 0}
+  .eyebrow { font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:var(--gold); margin:2px 0 24px; }
+  .top-heart { width:48px;height:48px; display:inline-grid;place-items:center; margin:0 auto 12px; color:#f04a60; font-size:29px; filter:drop-shadow(0 0 12px #ff244b88); animation:heartbeat 1.35s ease-in-out infinite; }
+  h1 { font:clamp(58px,11vw,88px)/.9 'Great Vibes',cursive; color:#fff1e8; margin:3px 0 2px; text-shadow:0 3px 30px #db32494d; }
+  .weds { font:italic 19px 'Cormorant Garamond',serif; letter-spacing:.16em; color:var(--gold); margin:4px 0 8px; }
+  .names { font:clamp(26px,6vw,38px) 'Cormorant Garamond',serif; letter-spacing:.17em; color:#fff1e8; margin:0; }
+  .ornament { color:var(--gold); font-size:14px; letter-spacing:.8em; margin:24px 0 19px; }
+  .invite { font:italic 21px/1.45 'Cormorant Garamond',serif; color:#f4d8c3; margin:0 auto 2px; max-width:440px; }
+  .couple-wrap { height:194px; display:grid;place-items:center; position:relative; margin:12px auto 12px; }
+  .halo { position:absolute;width:176px;height:176px;border-radius:50%;border:1px solid #d7a15b54;box-shadow:0 0 45px #c42b3b20,inset 0 0 45px #c42b3b16; animation:halo 7s linear infinite; }
+  .halo:before,.halo:after { content:'✦'; position:absolute;color:var(--gold);font-size:12px; }.halo:before{top:21px;left:19px}.halo:after{bottom:21px;right:19px}
+  .couple { width:205px;height:184px; overflow:visible; animation:sway 4s ease-in-out infinite; filter:drop-shadow(0 8px 18px #0009); }
+  .person { transform-box:fill-box; transform-origin:center bottom; animation:breathe 3.6s ease-in-out infinite; }
+  .person.bride { animation-delay:-1.8s; }
+  .spark { position:absolute;color:#ff6578;animation:floatup 4s ease-in-out infinite;opacity:0; }.s1{left:20%;top:42%;font-size:15px}.s2{right:19%;top:36%;font-size:12px;animation-delay:1.2s}.s3{left:27%;bottom:17%;font-size:10px;animation-delay:2s}
+  .quote { font:italic 19px/1.35 'Cormorant Garamond',serif; max-width:430px; margin:5px auto 10px; color:#f7e4d4; }
+  .quote-mark { display:block;color:#d98a68;font:32px 'Cormorant Garamond',serif;height:24px; }
+  .quote-credit { color:#c79a77;font-size:9px;letter-spacing:.22em;text-transform:uppercase; }
+  .divider { display:flex;align-items:center;gap:12px; margin:24px auto 19px;max-width:380px;color:var(--gold);font-size:12px; }.divider:before,.divider:after{content:'';height:1px;flex:1;background:linear-gradient(90deg,transparent,#bd8757aa)}.divider:after{transform:scaleX(-1)}
+  .details { display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; max-width:440px;margin:0 auto; }
+  .detail { padding:8px 4px; }.detail.full{grid-column:1/-1}
+  .label { display:block;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:7px; }
+  .value { font:22px 'Cormorant Garamond',serif;color:#fff0e5; }.sub { display:block;margin-top:4px;font-size:10px;letter-spacing:.08em;color:#d8b9a9; }
+  .closing { margin:24px auto 0;font:italic 18px 'Cormorant Garamond',serif;color:#eac9ae; }
+  .closing b { font-weight:500;color:var(--gold); }
+  .bottom-heart { color:#ed425b;display:inline-block;margin-top:12px;animation:heartbeat 1.35s ease-in-out infinite; }
+  @keyframes heartbeat {0%,100%{transform:scale(1)}14%{transform:scale(1.2)}28%{transform:scale(1)}42%{transform:scale(1.14)}56%{transform:scale(1)}}
+  @keyframes rise {from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes halo {to{transform:rotate(360deg)}}
+  @keyframes sway {0%,100%{transform:translateY(1px) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+  @keyframes breathe {0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.018)}}
+  @keyframes floatup {0%{transform:translateY(14px) scale(.6);opacity:0}30%{opacity:.95}100%{transform:translateY(-24px) scale(1.15);opacity:0}}
+  @media(max-width:520px){.card{min-height:auto;padding:46px 20px 38px}.eyebrow{letter-spacing:.28em}.couple-wrap{height:174px}.couple{height:165px}.details{gap:8px}.value{font-size:20px}.quote{font-size:18px}}
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="scene">
+  <div class="glow"></div>
+  <article class="card" aria-label="Wedding invitation for Naidu and Laxmi">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <p class="eyebrow">With the blessings of our families</p>
+    <div class="top-heart" aria-hidden="true">♥</div>
+    <p class="invite">Two hearts, one promise, a lifetime of love…</p>
+    <div class="ornament">— ❧ —</div>
+    <h1>Naidu</h1>
+    <p class="weds">weds</p>
+    <h2 class="names">LAXMI</h2>
+    <div class="couple-wrap" aria-label="An animated illustration of a couple">
+      <div class="halo"></div><span class="spark s1">♥</span><span class="spark s2">✦</span><span class="spark s3">♥</span>
+      <svg class="couple" viewBox="0 0 220 190" role="img" aria-label="Bride and groom standing together beneath a heart">
+        <defs>
+          <linearGradient id="dress" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ff5368"/><stop offset="1" stop-color="#8f1029"/></linearGradient>
+          <linearGradient id="suit" x1="0" x2="1"><stop stop-color="#34232a"/><stop offset="1" stop-color="#110d12"/></linearGradient>
+        </defs>
+        <path d="M110 26 C99 12 79 22 83 37 C86 47 99 53 110 62 C121 53 134 47 137 37 C141 22 121 12 110 26Z" fill="none" stroke="#f34c61" stroke-width="2" opacity=".85"><animate attributeName="transform" type="scale" values="1;1.08;1" dur="1.8s" repeatCount="indefinite" additive="sum"/></path>
+        <g class="person groom">
+          <circle cx="83" cy="75" r="16" fill="#d99a76"/><path d="M67 73 Q68 54 83 57 Q99 59 99 76 L94 71 Q83 78 68 70Z" fill="#171014"/>
+          <path d="M64 96 Q83 87 101 96 L110 159 L57 159Z" fill="url(#suit)" stroke="#d2a06f" stroke-width="1"/>
+          <path d="M78 94 L84 106 L90 94 L87 143 L81 143Z" fill="#e7d5c3"/><path d="M83 104 L87 110 L84 133 L80 110Z" fill="#9e1c31"/>
+          <path d="M64 102 L51 135 M99 102 L112 130" fill="none" stroke="#d99a76" stroke-width="7" stroke-linecap="round"/>
+          <path d="M66 157 L64 179 M99 157 L103 179" stroke="#191217" stroke-width="11" stroke-linecap="round"/>
+        </g>
+        <g class="person bride">
+          <circle cx="137" cy="76" r="15" fill="#e5ad89"/><path d="M122 77 Q119 49 139 54 Q159 58 153 92 L148 85 L150 111 L124 111 L126 85Z" fill="#241218"/>
+          <path d="M119 97 Q138 88 156 98 L178 162 Q139 177 101 162Z" fill="url(#dress)" stroke="#f0bd7d" stroke-width="1.2"/>
+          <path d="M120 105 Q137 118 155 104 M112 132 Q138 147 168 130 M106 151 Q140 168 174 149" fill="none" stroke="#edb879" stroke-width="1" opacity=".8"/>
+          <path d="M124 102 L108 128 M154 102 L166 125" fill="none" stroke="#e5ad89" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="137" cy="94" r="2" fill="#f3c779"/><path d="M129 90 Q137 94 145 90" fill="none" stroke="#f4cd84" stroke-width="1.5"/>
+        </g>
+        <path d="M109 117 Q111 112 115 117" fill="none" stroke="#efc887" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="quote-mark">“</span>
+    <p class="quote">A beautiful beginning to forever—where two souls meet, and love writes the story.</p>
+    <span class="quote-credit">A promise of forever</span>
+    <div class="divider">✦</div>
+    <section class="details" aria-label="Wedding details">
+      <div class="detail"><span class="label">The day</span><span class="value">14 February 2027</span><span class="sub">Sunday · Valentine’s Day</span></div>
+      <div class="detail"><span class="label">Celebration begins</span><span class="value">10:00 AM</span><span class="sub">Please join us</span></div>
+      <div class="detail full"><span class="label">Wedding muhurtham</span><span class="value">12:12:12 PM</span></div>
+      <div class="detail full"><span class="label">Venue</span><span class="value">Srikakulam</span><span class="sub">Andhra Pradesh</span></div>
+    </section>
+    <p class="closing">Your presence will make our day <b>complete.</b></p>
+    <span class="bottom-heart" aria-hidden="true">♥</span>
+  </article>
+</main>
+</body>
+</html>
